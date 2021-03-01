@@ -13,6 +13,9 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     env:
         BAIDU_COOKIE: ${{ secrets.BAIDU_COOKIE }}
+        BAIDU_COOKIE2: ${{ secrets.BAIDU_COOKIE2 }}
+        BAIDU_COOKIE3: ${{ secrets.BAIDU_COOKIE3 }}
+        BAIDU_COOKIE4: ${{ secrets.BAIDU_COOKIE4 }}
         TZ: Asia/shanghai
     steps:
       - name: Checkout
@@ -24,10 +27,31 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【百度极速】'
+          
+      - name: '运行 【百度极速一】'
         if: env.BAIDU_COOKIE
         run: |
           node Task/baidu_speed.js
+
+          
+      - name: '运行 【百度极速二】'
+        if: env.BAIDU_COOKIE2
+        run: |
+          node Task/baidu_speed.js
+
+          
+      - name: '运行 【百度极速三】'
+        if: env.BAIDU_COOKIE3
+        run: |
+          node Task/baidu_speed.js
+
+          
+      - name: '运行 【百度极速四】'
+        if: env.BAIDU_COOKIE4
+        run: |
+          node Task/baidu_speed.js
+          
+          
         env:
           BAIDU_CASH: ${{ secrets.BAIDU_CASH }}
           BAIDU_TASK: ${{ secrets.BAIDU_TASK }}
