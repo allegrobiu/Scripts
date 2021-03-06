@@ -13,9 +13,6 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     env:
         BAIDU_COOKIE: ${{ secrets.BAIDU_COOKIE }}
-        BAIDU_COOKIE2: ${{ secrets.BAIDU_COOKIE2 }}
-        BAIDU_COOKIE3: ${{ secrets.BAIDU_COOKIE3 }}
-        BAIDU_COOKIE4: ${{ secrets.BAIDU_COOKIE4 }}
         TZ: Asia/shanghai
     steps:
       - name: Checkout
