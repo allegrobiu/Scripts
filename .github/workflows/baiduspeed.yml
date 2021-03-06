@@ -32,26 +32,7 @@ jobs:
         if: env.BAIDU_COOKIE
         run: |
           node Task/baidu_speed.js
-
-          
-      - name: '运行 【百度极速二】'
-        if: env.BAIDU_COOKIE2
-        run: |
-          node Task/baidu_speed.js
-
-          
-      - name: '运行 【百度极速三】'
-        if: env.BAIDU_COOKIE3
-        run: |
-          node Task/baidu_speed.js
-
-          
-      - name: '运行 【百度极速四】'
-        if: env.BAIDU_COOKIE4
-        run: |
-          node Task/baidu_speed.js
-          
-          
+ 
         env:
           BAIDU_CASH: ${{ secrets.BAIDU_CASH }}
           BAIDU_TASK: ${{ secrets.BAIDU_TASK }}
